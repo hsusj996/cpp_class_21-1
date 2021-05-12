@@ -1,2 +1,3 @@
 ﻿  c++_exercise_chap11.cpp
-  c++programming.vcxproj -> C:\Users\82107\source\repos\c++programming\Debug\c++programming.exe
+C:\Users\tpwls\OneDrive\Documents\cpp_class_21-1\c++programming\c++_exercise_chap11.cpp(665,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  c++programming.vcxproj -> C:\Users\tpwls\OneDrive\Documents\cpp_class_21-1\c++programming\Debug\c++programming.exe

@@ -580,3 +580,98 @@ int main()
 	}
 
 }*/
+/*수업 예제
+#include <iostream>
+using namespace std;
+
+struct namecard {
+	char name[20];
+	char job[30];
+	char tel[20];
+	char email[40];
+};
+void print(struct namecard* man)
+{
+	cout << (man + 1)->name;
+}
+
+void main()
+{
+	namecard man[3] = { { "김주현","MCSE전문강사","418-9876","freentour@naver,com" } ,
+		{ "박혜경","웹마스터","551-6986","hk@naver.com" },{ "김동식","기획A팀대리","318-3961","ds@naver.com" } };
+
+	cout << "\n입력받은 데이터를 출력합니다. ";
+	cout << "\n 이름 \t 직업 \t\t 연락처 \t 이메일 ";
+	cout << "\n===========================================";
+	for(int i=0;i<3;i++)
+		cout << "\n " << man[i].name << "\t" << man[i].job << "\t" << man[i].tel << "\t" <<man[i].email;
+	cout << "\n===========================================";
+	print(man);
+}*/
+/*수업예제 배열 함수사용
+#include <iostream>
+using namespace std;
+
+struct namecard {
+	char name[20];
+	char job[30];
+	char tel[20];
+	char email[40];
+};
+
+namecard structInput()
+{
+	namecard temp;
+	cout << "\n이름을 입력하세요.=>";
+	cin >> temp.name;
+	cout << "직업을 입력하세요.=>";
+	cin >> temp.job;
+	cout << "연락처을 입력하세요.=>";
+	cin >> temp.tel;
+	cout << "이메일을 입력하세요.=>";
+	cin >> temp.email;
+
+	return temp;
+}
+
+void structPrn(namecard temp)
+{
+	cout << "\n " <<temp.name << "\t" << temp.job << "\t" <<temp.tel << "\t" << temp.email;
+}
+void main()
+{
+	namecard x[3];
+	for (int i = 0;i < 3;i++)
+		x[i] = structInput();
+
+	cout << "\n입력받은 데이터를 출력합니다. ";
+	cout << "\n 이름 \t 직업 \t\t 연락처 \t 이메일 ";
+	cout << "\n===========================================";
+	for (int i = 0;i < 3;i++)
+		structPrn(x[i]);
+	cout << "\n===========================================";
+}*/
+/*수업예제 포인터
+#include <iostream>
+using namespace std;
+
+struct namecard {
+	char name[20];
+	char job[30];
+	char tel[20];
+	char email[40];
+};
+
+void main()
+{
+	namecard x[2] = { { "전수빈","치과의사","356-0868","eldy@naver.com" }, { "전원지","디자이너","345-0876","onejee@naver.com" } };
+	namecard* p;
+
+	p = x;
+	cout << "\n입력받은 데이터를 출력합니다. ";
+	cout << "\n 이름 \t 직업 \t\t 연락처 \t 이메일 ";
+	cout << "\n===========================================";
+	for(int i=0;i<2;i++)
+		cout << "\n " << (p + i)->name << "\t" << (p + i)->job << "\t" << (p + i)->tel << "\t" << (p + i)->email;
+	cout << "\n===========================================";
+}*/
